@@ -32,5 +32,27 @@ public class HashMapDemo {
             System.out.println("\n");*/
             System.out.println("key : "+key +"," +" value : "+hashmap.get(key));
         }
+
+
+        HashMap<Integer, String> students = new HashMap<>();
+        students.put(1, "Priti");
+        students.put(2, "Elisha");
+        students.put(3, "Navya");
+        students.put(4, "Gajendra");
+        System.out.println(students);  // {1=Priti, 2=Elisha, 3=Navya, 4=Gajendra}
+        // entryset
+        for(int student: students.keySet()){
+            System.out.println(student + " " + students.get(student));
+            /* 1 Priti
+            2 Elisha
+            3 Navya
+            4 Gajendra
+            */
+        }
+        System.out.println("\n");
+        for(Map.Entry<Integer,String> student : students.entrySet()){
+            System.out.println("keys" +student.getKey() +" | " + "values "+ student.getValue());
+        }
+
     }
 }
